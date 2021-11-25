@@ -22,5 +22,10 @@ app.get("/", (request, response) => {
     response.sendFile(__dirname + "/index.html");
 });
 
+app.get("/port/", (request, response) => {
+    response.send("Port: ", process.env.port);
+});
+
+
 server.listen(port);
 console.log('Listening on: ' + port);
